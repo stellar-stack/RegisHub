@@ -1,0 +1,52 @@
+<?php include "../includes/header.php" ?>
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav_items">
+      <a href="../php/navigation.php"> <img class="img-logo" src="../img/logo.png" alt="Logo" /></a>
+      <div class="link_container">
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="link_container">
+        <ul class="nav-links">
+          <li>
+            <a class="imp-list" href="../php/registration.php">Register<span class="register_arrow">&rarr;</span></a>
+          </li>
+        </ul>
+      </div> -->
+    </nav>
+  </header>
+
+
+  <section class="main_section">
+
+
+<div class="register_card">
+  <h1 class="register_h1">FS Education</h1>
+  <!-- <aside class="register_aside">where we prepare you for life</aside> -->
+
+  <p class="register_para">Education, affordable to all, taught by the best. Where we prepare you for life.</p>
+
+<div class="register_button">
+  <a class="imp-list" href="../php/registration.php">Register<span class="register_arrow">&rarr;</span></a>
+  </div>
+</div>
+</section>
+
+
+  <!-- <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script> -->
+
+
+  <?php include "../includes/footer.php"; ?>
+</body>
+
+</html>
