@@ -1,0 +1,10 @@
+<?php
+
+$connection = mysqli_connect('localhost', 'root', '', 'fs');
+
+if(!$connection)
+{
+    echo 'not connected';
+}
+
+?>
