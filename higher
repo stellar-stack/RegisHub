@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
+
+    <title>FS Education | Admission Form For High School Students</title>
+</head>
+
+<?php include "../php/navigation.php" ?>
+<body>
+
+
+<form action="" method="post">
+
+    <div>
+        <label for="name">Student's Name</label>
+        <input type="text" name="name" value="Enter the name of the student">
+<br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" value="-">
+<br>
+        <label for="Father">Father's Name</label>
+        <input type="text" name="father" value="Enter the name of the Father">
+<br>
+        <label for="School">School Name</label>
+        <input type="text" name="school" value=" Enter School Name">
+
+    </div>
+<br>
+ <!-- div part 2, for registration for high school -->
+ <div class="High_school">
+        <select name="grades" id="grade">
+            <option value="-">Select Grade</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+        </select>
+    </div> 
+    <!-- end of div part 2 -->
+
+<br>
+     <div class="Board">
+        <select name="Educational_Board" id="Educational_Board">
+            <option value="-">Select Board</option>
+            <option value="Gujarat Board">Gujarat Board</option>
+            <option value="CBSE">CBSE</option>
+            <option value="ICSE">ICSE</option>
+        </select>
+    </div>
+    
+<br>
+    <label for="phone">Contact</label>
+    <input type="number" name="phone">
+    <label for="Whatsapp">Whatsapp</label>
+    <input type="number" name="Whatsapp">
+    <label for="address">Home Address</label>
+    <input type="text" name="address">
+
+    <label for="question">Why do you want to join this tuition?</label>
+    <textarea name="qeustion" id="question" cols="50" rows="20"></textarea>
+
+
+    <p>i hereby declare that i have provided legit information and will hold myself responsible for any error or false information</p>
+    <label for="check_mark">I Agree</label>
+    <input type="checkbox" name="check_mark"> 
+
+</form>
+</body>
+</html>
