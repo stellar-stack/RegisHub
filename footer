@@ -1,0 +1,26 @@
+<?php include "../includes/header.php" ?>
+
+<footer class="footer_nav">
+
+<div class="footer-tag">
+    <h2>THE FS EDUCATION</h2>
+    <P>where we prepare you for life</P>
+</div>
+
+    <div class="socials">
+        <p>whatsapp</p>
+        <p>someone123@gamil.com</p>
+        <h3>Instagram</h3>
+    </div>
+
+    <div>
+        
+    <a class="tele" href="tel" title="call">9722219646</a>
+    </div>
+
+</footer>
+
+<style>
+    
+
+</style>
