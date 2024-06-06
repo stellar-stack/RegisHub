@@ -1,0 +1,170 @@
+<?php include "../includes/db.php"; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
+    
+    <link rel="icon" href="../img/logo.png" />
+    <title>FS Education | Admission Form For Primary Students</title>
+</head>
+
+
+<body>
+  <header>
+    <nav class="nav_items">
+      <a href="../php/navigation.php"> <img class="img-logo" src="../img/logo.png" alt="Logo" /></a>
+      <div class="link_container">
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="link_container">
+        <ul class="nav-links">
+          <li>
+            <a class="imp-list" href="../php/registration.php">Register<span class="register_arrow">&rarr;</span></a>
+          </li>
+        </ul>
+      </div> -->
+    </nav>
+  </header>
+
+
+<?php
+
+if (isset($_POST['Submit'])) {
+
+    $student_name =  $_POST['name'];
+
+    $student_image =  $_FILES['image']['name'];
+    $student_tmp_image =  $_FILES['image']['tmp_name'];
+
+    $dob =  $_POST['dob'];
+    $fathers_name =  $_POST['father'];
+    $School_name =  $_POST['school'];
+    $grade =  $_POST['grades'];
+    $board =  $_POST['Educational_Board'];
+    $contact =  $_POST['phone'];
+    $whatsapp =  $_POST['Whatsapp'];
+    $address =  $_POST['address'];
+    $question =  $_POST['question'];
+
+
+    move_uploaded_file($student_tmp_image, "../img/$student_image");
+
+    if (
+        empty($student_name) || empty($student_image) || empty($student_tmp_image) || empty($dob) ||
+        empty($fathers_name) || empty($School_name) || empty($contact) || empty($whatsapp) || empty($address) || empty($question)
+    ) {
+        echo "<h1> All fields must be filled up</h1>";
+    } else if ($grade === '-') {
+        echo 'Please fill up the grade field';
+    } else if ($board === '-') {
+        echo 'Select the Board';
+    } else {
+
+        $query = "insert into form_1(image, student_name, 
+dob,
+father_name, 
+school_name, 
+grade,
+board, 
+contact, 
+whatsapp, 
+address, 
+reason) ";
+
+        $query .= "VALUES (
+        '{$student_image}',
+        '{$student_name}',
+        '{$dob}', 
+        '{$fathers_name}',
+        '{$School_name}',
+        '{$grade}',
+        '{$board}',
+        '{$contact}',
+        '{$whatsapp}',
+        '{$address}',
+        '{$question}')";
+
+
+
+        $create_primary_query = mysqli_query($connection, $query);
+
+        if (!$create_primary_query) {
+            die('QUERY_FAILED' . mysqli_error($connection));
+        }
+    }
+}
+
+?>
+
+<form action="../php/primary.php" method="post" enctype="multipart/form-data">
+
+    <div>
+        <label for="image">Photo: </label>
+        <input type="file" name="image">
+    </div>
+
+    <div>
+        <label for="name">Student's Name: </label>
+        <input type="text" name="name" placeholder="Enter the name of the student">
+        <br>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" max="<?php echo date('Y-m-d'); ?>" name="dob" value="-">
+        <br>
+        <label for="Father">Father's Name: </label>
+        <input type="text" name="father" placeholder="Enter the name of the Father">
+        <br>
+        <label for="School">School Name: </label>
+        <input type="text" name="school" placeholder=" Enter School Name">
+
+    </div>
+
+    <!-- div part 1, for registration for primary -->
+    <div class="Primary">
+        <select name="grades" id="grade">
+            <option value="-">Select Grade</option>
+            <option value="5th">5th</option>
+            <option value="6th">6th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+        </select>
+    </div>
+    <!-- end of div part 1 -->
+    <br>
+
+    <div class="Board">
+        <select name="Educational_Board" id="Educational_Board">
+            <option value="-">Select Board</option>
+            <option value="Gujarat Board">Gujarat Board</option>
+            <option value="CBSE">CBSE</option>
+            <option value="ICSE">ICSE</option>
+        </select>
+    </div>
+
+
+    <label for="phone">Contact: </label>
+    <input type="number" name="phone">
+    <label for="Whatsapp">Whatsapp: </label>
+    <input type="number" name="Whatsapp">
+    <label for="address">Home Address: </label>
+    <input type="text" name="address">
+
+    <br>
+    <label for="question">Why do you want to join this tuition?</label>
+    <textarea name="question" id="question" placeholder="Because..."></textarea>
+
+
+    <p>i hereby declare that i have provided legit information and will hold myself responsible for any error or false information</p>
+    <label for="check_mark">I Agree</label>
+    <input type="checkbox" name="check_mark">
+
+    <input type="submit" name="Submit">
+
+</form>
