@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
+
+    <link rel="icon" href="../img/logo.png" />
+
+    <title>FS Education | Registration</title>
+</head>
+
+<body>
+    
+
+<header>
+    <nav class="nav_items">
+      <a href="../php/navigation.php"> <img class="img-logo" src="../img/logo.png" alt="Logo" /></a>
+      <div class="link_container">
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="link_container">
+        <ul class="nav-links">
+          <li>
+            <a class="imp-list" href="../php/registration.php">Register<span class="register_arrow">&rarr;</span></a>
+          </li>
+        </ul>
+      </div> -->
+    </nav>
+  </header>
+
+
+<div>
+<section class="main_container">
+    <a href="../php/primary.php">
+    <div class="card_one">
+        <h1>Grade 5 - 8</h1>
+    </div>
+    </a>
+
+    <a href="../php/higher.php">
+    <div class="card_two">
+    <h1>Grade 9 - 10</h1>
+    </div>
+    </a>
+
+<a href="../php/secondary.php">
+    <div class="card_three">
+    <h1>Grade 11 - 12</h1>
+    </div>
+</a>
+</section>
+</div>
+
+<?php include "../includes/footer.php"; ?>
+
+</body>
+
+<!-- 
+<form action="">
+
+    <div>
+        <label for="name">Student's Name</label>
+        <input type="text" name="name" value="Enter the name of the student">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" value="-">
+
+        <label for="Father">Father's Name</label>
+        <input type="text" name="father" value="Enter the name of the Father">
+
+        <label for="School">School Name</label>
+        <input type="text" name="school" value=" Enter School Name">
+
+    </div>
+
+    <!-- div part 1, for registration for primary -->
+    <!-- <div class="Primary">
+        <select name="grades" id="grade">
+            <option value="-">Select Grade</option>
+            <option value="5th">5th</option>
+            <option value="6th">6th</option>
+            <option value="7th">7th</option>
+            <option value="8th">8th</option>
+        </select>
+    </div> -->
+    <!-- end of div part 1 -->
+
+
+    <!-- div part 2, for registration for high school -->
+    <!-- <div class="High_school">
+        <select name="grades" id="grade">
+            <option value="-">Select Grade</option>
+            <option value="9th">9th</option>
+            <option value="10th">10th</option>
+        </select>
+    </div> -->
+    <!-- end of div part 2 -->
+
+
+    <!-- div part 3, for registration for higher secondary -->
+    <!-- <div class="Higher_Secondary">
+        <select name="grades" id="grade">
+            <option value="-">Select Grade</option>
+            <option value="11th">11th Science</option>
+            <option value="12th">12th Science</option>
+            <option value="11th">11th Commerce</option>
+            <option value="12th">12th Commerce</option>
+            <option value="11th">11th Arts</option>
+            <option value="12th">12th Arts</option>
+        </select>
+    </div> -->
+    <!-- end of div part 3, for registration for higher secondary -->
+
+
+    <!-- <div class="Board">
+        <select name="Educational_Board" id="Educational_Board">
+            <option value="-">Select Board</option>
+            <option value="Gujarat Board">Gujarat Board</option>
+            <option value="CBSE">CBSE</option>
+            <option value="ICSE">ICSE</option>
+        </select>
+    </div>
+
+    <label for="phone">Contact</label>
+    <input type="number" name="phone">
+    <label for="Whatsapp">Whatsapp</label>
+    <input type="number" name="Whatsapp">
+    <label for="address">Home Address</label>
+    <input type="text" name="address">
+
+    <label for="question">Why do you want to join this tuition?</label>
+    <textarea name="qeustion" id="question" cols="50" rows="20"></textarea>
+
+
+    <p>i hereby declare that i have provided legit information and will hold myself responsible for any error or false information</p>
+    <label for="check_mark">I Agree</label>
+    <input type="checkbox" name="check_mark"> 
+
+</form> -->
